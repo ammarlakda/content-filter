@@ -1,0 +1,9 @@
+{
+    "manifest_version": 3,
+    "name": "Content Filter",
+    "description": "enables users to hide distracting content on wesbites.",
+    "version": "1.0",
+    "background": {
+        "service_worker" : "background.js"
+    }
+}
