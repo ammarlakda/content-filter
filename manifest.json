@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Content Filter",
+    "version": "1.0",
+    "description": "Transform your browsing experience with Content Filter Pro, the ultimate tool for a distraction-free online journey. Say goodbye to unwanted attention-grabbing content such as Instagram Reels, Facebook Reels, and other distracting media. Whether you're focusing on work, studying, or simply aiming for a more mindful internet usage, Content Filter Pro is here to help you stay on track.",
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icons/automation.png",
+        "48": "icons/automation.png",
+        "128": "icons/automation.png"
+      }
+    },
+    "permissions": [
+      "storage",
+      "activeTab",
+      "scripting"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://*.instagram.com/*", "*://*.facebook.com/*"],
+        "js": ["contentScript.js"]
+      }
+    ]
+  }
